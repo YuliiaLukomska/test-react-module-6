@@ -1,0 +1,15 @@
+.buttonsWrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.button {
+  padding: 8px;
+  text-transform: capitalize;
+  border: black solid 0.5px;
+  border-radius: 4px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
