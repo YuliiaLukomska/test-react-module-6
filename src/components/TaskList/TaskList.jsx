@@ -3,6 +3,7 @@ import { Task } from "../Task/Task";
 import { getTasks, getStatusFilter } from "../redux/selectors";
 import { statusFilters } from "../redux/constants";
 
+// тут повертаємо таски, які буде відображено в інтерфейсі в залежності від обраного користувачем фільтру(All/Active/Completed).
 const getVisibleTasks = (tasks, statusFilter) => {
   switch (statusFilter) {
     case statusFilters.active:

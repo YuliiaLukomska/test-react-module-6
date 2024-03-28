@@ -43,8 +43,15 @@ const filtersReducer = (state = filtersInitialState, action) => {
   }
 };
 
-// те, що у дужках combineReducers це і є весь стейт (state).
-/* Якщо прийшов екшн на зміну фільтра, то tasksReducer пропустить цей екшн через всі кейси і поверне стейт без змін, а filtersReducer поверне вже новий state.*/
+/* Стор зберігає оновлений стан(state) повернутий з ред.серій. 
+Те, що у дужках combineReducers це і є весь стейт (state):
+{ 
+  tasks: [](tasksReducer повертає масив),
+  filters: { status: '' }(filtersReducer повертає об'єкт з вл-тю status),
+}.
+Якщо прийшов екшн на зміну фільтра, то tasksReducer пропустить 
+цей екшн через всі кейси і поверне стейт без змін - це буде масив тасок, а filtersReducer 
+поверне вже новий state - це буде об'єкт.*/
 export const rootReducer = combineReducers({
   tasks: tasksReducer,
   filters: filtersReducer,

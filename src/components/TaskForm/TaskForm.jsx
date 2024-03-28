@@ -8,6 +8,8 @@ export const TaskForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
+    /*Вводжу в поле нову таску і роблю сабміт форми - в обробнику події(сабміту) відправляю екшн до стору 
+    (відбулась ініціалізація відправки екшену).  */
     dispatch(addTask(form.elements.text.value));
     form.reset();
   };
